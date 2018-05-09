@@ -1,0 +1,51 @@
+ex.4:
+import string
+def words_reverser(text):
+    a=text.split()
+    new_text=''
+    for i in range(len(a)):
+        b=a[i][::-1]
+        new_text=new_text+b+'ay'+' '
+    return (new_text)
+new_text=input('Give a text:')
+print(words_reverser(new_text))
+
+
+ex.5:
+def my_function(x,y):
+
+    if x==8 :
+        if sum == 100:
+            print(1,last='')
+            for b in range(0,8):
+                if y[b]==1:
+                    print(' + ',last='')
+                if y[b]==2:
+                    print(' - ',last='')
+                print(b+2,last='')
+            print()
+    else:
+        for c in range(0,3):
+            y[x-1]=c
+            my_function(x+1,y)
+y=[]
+for i in range(0,8):
+    y.append(0)
+my_function(0,y)
+
+
+ex.9:
+import math
+number=int(input('Give a number:'))
+factor=[]
+prime_factors=[]
+for x in range(2,int(math.sqrt(number)+1)):
+    if number%x==0:
+        factor.append(x)
+for b in factor:
+    for a in range(2,b):
+        if b%a==0:
+            prime_factors is  False
+        if b%a!=0:
+            prime_factors.append(b)
+print('Give the largest prime factor',prime_factors[-1])
